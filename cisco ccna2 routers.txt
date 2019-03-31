@@ -1,0 +1,29 @@
+1.a) 5
+1.b) 	r1->2 
+	r2->3 
+	r3->2
+
+1.c)	r1->3
+	r2->2
+	r3->3
+
+1.d) No hay rutas hacia esas redes en r1.
+
+2.a) Una ruta estática recursiva es configurada cuando especificamos la dirección IP del siguiente salto del vecino. para resolver la interface de salida y especificar la siguiente dirección de salto.
+2.b) Porque primero debe mirar en la tabla de ruteo en la red de destino y luego su interfaz en dirección de la red del siguiente salto.
+
+Paso 2: El ping falla porque r1 tiene rutas hacia r2 y r3, pero estas no tienen una ruta hacia r1.
+2.2.a) Una ruta estatica directamente conectada confía en su interfaz de salida, mientras que una recursiva confía en la ip del siguiente salto.
+2.2.b) show ip route connected
+2.2.c) show ip route static
+2.2.d) show ip route (Directamente conectadas tienen una C, y las estáticas tienen una S)
+
+paso 3.a):una ruta por defectoees usada por el router cuando no se conoce otra ruta existente para la red de destino, y una ruta estática es dirigida hacia una red especifica.
+3.b)	show ip route. Se muestra con un S*
+
+4.a)
+Una ruta totalmente especificada es una ruta estática configurada con una interfaz de salida y la dirección del siguiente salto.
+ip route 172.31.0.0 255.255.255.0 s0/0/1 
+
+4.b) ip route 172.31.192 255.255.255.255 s0/0/1 172.31.1.197 
+4.c) ip route 142.31.1.0 255.255.255.128 s0/0/1 172.31.1.197
